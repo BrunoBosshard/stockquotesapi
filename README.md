@@ -4,7 +4,7 @@
 A simple example implementation of the IEX Cloud REST API through a web app hosted on GitHub Pages.
 
 ## How to use the online version
-1. Open https://brunobosshard.github.io/stockquotesapi in your browser.
+1. Open https://stockquotesapi.cyclic.app/ in your browser.
 2. Enter a valid (USA) stock ticker (for example "MSFT" for Microsoft) in the "Lookup Stock Quote" box and click the "Lookup" button.
 
 ## Node Package Manager (NPM) packages used

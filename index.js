@@ -5,14 +5,15 @@ import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = process.env.PORT || 80;
+const APITOKEN = process.env.iex_cloud_api_token
 
 // use body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
 
 // create call_api function
 function call_api(finishedAPI, ticker) {
-	// Pleae use your own API key from https://iexcloud.io/cloud-login#/register/ . It's easy and free. Thank you!
-	got.get('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=pk_698f5b555b7d44d29a5d0633da922912', {responseType: 'json'}).then(res => {
+	// Pleae use your own API token from https://iexcloud.io/cloud-login#/register/ . It's easy and free.
+	got.get('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=' + APITOKEN, {responseType: 'json'}).then(res => {
 		if (res.err) {return console.log(res.err);}
 		// status codes 200-299
 		if (res.ok) {
