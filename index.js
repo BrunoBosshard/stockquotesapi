@@ -13,6 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 // create call_api function
 function call_api(finishedAPI, ticker) {
 	// Pleae use your own API token from https://iexcloud.io/cloud-login#/register/ . It's easy and free.
+	// The API token should look like this example token: pk_062031d20883444f9ea74e2610fe2011
 	got.get('https://cloud.iexapis.com/stable/stock/' + ticker + '/quote?token=' + APITOKEN, {responseType: 'json'}).then(res => {
 		if (res.err) {return console.log(res.err);}
 		// status codes 200-299
