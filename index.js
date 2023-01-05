@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = process.env.PORT || 80;
-const APITOKEN = process.env.iex_cloud_api_token
+const APITOKEN = process.env.IEX_CLOUD_API_TOKEN
 
 // use body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
